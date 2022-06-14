@@ -11,7 +11,7 @@ type NextFunction = (err?: any) => void;
 type SimpleHandleFunction = (req: http.IncomingMessage & IncomingMessageExtended, res: http.ServerResponse) => void;
 type NextHandleFunction = (req: connect.IncomingMessage & IncomingMessageExtended, res: http.ServerResponse, next: NextFunction) => void;
 
-type Handler = SimpleHandleFunction | NextHandleFunction
+export type Handler = SimpleHandleFunction | NextHandleFunction
 
 declare module "fastify" {
   interface FastifyInstance {
